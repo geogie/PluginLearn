@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 // 在编译时期，应用myplugin插件
 apply plugin: 'myplugin'
 
+pluginExt{
+    param1 = 'app param1'
+    param2 = 'app param2'
+    nestExt{
+        nestParam1='app nestParam1'
+        nestParam2='app nestParam2'
+    }
+}
 
 buildscript {
     repositories {

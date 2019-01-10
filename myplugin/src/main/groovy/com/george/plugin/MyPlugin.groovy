@@ -12,5 +12,9 @@ public class MyPlugin implements Plugin<Project> {
 
         project.gradle.addListener(new TimingsListener())
 
+        project.extensions.create('pluginExt',PluginExtension)
+        project.pluginExt.extensions.create('nestExt',PluginNestExtension)
+        project.task('customTask',type: CustomTask)
+
     }
 }
