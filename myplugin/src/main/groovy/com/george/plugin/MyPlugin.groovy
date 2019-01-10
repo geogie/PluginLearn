@@ -5,7 +5,12 @@ import org.gradle.api.Project
 
 public class MyPlugin implements Plugin<Project> {
     void apply(Project project) {
-        //这里实现plugin的逻辑
-        println "hello, this is my plugin!"
+        println "Hello gradle plugin"
+        project.task("testTask") << {
+            println "Hello2 gradle plugin"
+        }
+
+        project.gradle.addListener(new TimingsListener())
+
     }
 }

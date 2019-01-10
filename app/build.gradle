@@ -3,13 +3,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'myplugin'
 
 
-buildscript{
-    repositories{
-        maven{
+buildscript {
+    repositories {
+        maven {
             url uri('../release')
         }
     }
-    dependencies{
+    dependencies {
         classpath 'com.george.plugin:myplugin:1.0'
     }
 }
